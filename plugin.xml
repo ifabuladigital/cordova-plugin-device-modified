@@ -152,6 +152,7 @@
 
         <source-file src="src/wp/Device.cs" />
     </platform>
+    -->
 
     <!-- windows -->
     <!--
