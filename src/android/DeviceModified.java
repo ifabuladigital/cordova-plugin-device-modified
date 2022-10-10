@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package org.apache.cordova.device;
+package org.apache.cordova.devicemodified;
 
 import java.util.TimeZone;
 
@@ -30,7 +30,7 @@ import org.json.JSONObject;
 
 import android.provider.Settings;
 
-public class Device extends CordovaPlugin {
+public class DeviceModified extends CordovaPlugin {
     public static final String TAG = "Device";
 
     public static String platform;                            // Device OS
@@ -43,7 +43,7 @@ public class Device extends CordovaPlugin {
     /**
      * Constructor.
      */
-    public Device() {
+    public DeviceModified() {
     }
 
     /**
@@ -55,7 +55,7 @@ public class Device extends CordovaPlugin {
      */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-        Device.uuid = getUuid();
+        DeviceModified.uuid = getUuid();
     }
 
     /**
@@ -69,7 +69,7 @@ public class Device extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("getDeviceInfo".equals(action)) {
             JSONObject r = new JSONObject();
-            r.put("uuid", Device.uuid);
+            r.put("uuid", DeviceModified.uuid);
             r.put("version", this.getOSVersion());
             r.put("platform", this.getPlatform());
             r.put("model", this.getModel());
