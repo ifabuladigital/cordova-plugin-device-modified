@@ -30,7 +30,7 @@
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320648</issue>
 
-    <js-module src="www/device.js" name="devicemodified">
+    <js-module src="www/devicemodified.js" name="devicemodified">
         <clobbers target="devicemodified" />
     </js-module>
 
