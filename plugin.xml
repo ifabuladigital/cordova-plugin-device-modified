@@ -23,15 +23,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-device-modified"
     version="1.1.0">
-    <name>Device</name>
+    <name>DeviceModified</name>
     <description>Cordova Device Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,device</keywords>
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320648</issue>
 
-    <js-module src="www/device.js" name="device">
-        <clobbers target="device" />
+    <js-module src="www/device.js" name="devicemodified">
+        <clobbers target="devicemodified" />
     </js-module>
 
     <!-- firefoxos -->
@@ -57,15 +57,16 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Device" >
+            <feature name="DeviceModified" >
                 <param name="android-package" value="org.apache.cordova.devicemodified.DeviceModified"/>
             </feature>
         </config-file>
 
         <source-file src="src/android/DeviceModified.java" target-dir="src/org/apache/cordova/devicemodified" />
     </platform>
-
+    
     <!-- amazon-fireos -->
+    <!--
     <platform name="amazon-fireos">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Device" >
@@ -75,8 +76,10 @@
 
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
     </platform>
+    -->
     
     <!-- ubuntu -->
+    <!--
     <platform name="ubuntu">
         <header-file src="src/ubuntu/device.h" />
         <source-file src="src/ubuntu/device.cpp" />
@@ -84,8 +87,10 @@
             <merges target="device" />
         </js-module>
     </platform>
-
+    -->
+  
     <!-- ios -->
+    <!--
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -96,8 +101,10 @@
         <header-file src="src/ios/CDVDevice.h" />
         <source-file src="src/ios/CDVDevice.m" />
     </platform>
+    -->
 
     <!-- blackberry10 -->
+    <!--
     <platform name="blackberry10">
         <source-file src="src/blackberry10/index.js" target-dir="Device" />
         <config-file target="www/config.xml" parent="/widget">
@@ -107,8 +114,10 @@
             <rim:permit>read_device_identifying_information</rim:permit>
         </config-file>
     </platform>
+    -->
 
     <!-- wp7 -->
+    <!--
     <platform name="wp7">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -122,8 +131,10 @@
 
         <source-file src="src/wp/Device.cs" />
     </platform>
+    -->
 
     <!-- wp8 -->
+    <!--
     <platform name="wp8">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -144,8 +155,10 @@
             <merges target="" />
         </js-module>
     </platform>
+    -->
 
     <!-- browser -->
+    <!--
     <platform name="browser">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -157,8 +170,10 @@
             <runs />
         </js-module>
     </platform>
+    -->
 
     <!-- osx -->
+    <!--
     <platform name="osx">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -169,6 +184,6 @@
         <header-file src="src/osx/CDVDevice.h" />
         <source-file src="src/osx/CDVDevice.m" />
     </platform>
-
+    -->
 
 </plugin>
