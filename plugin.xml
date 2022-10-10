@@ -35,6 +35,7 @@
     </js-module>
 
     <!-- firefoxos -->
+    <!--
     <platform name="firefoxos">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -46,13 +47,16 @@
             <runs />
         </js-module>
     </platform>
+    -->
 
     <!-- tizen -->
+    <!--
     <platform name="tizen">
         <js-module src="src/tizen/DeviceProxy.js" name="DeviceProxy">
             <runs />
         </js-module>
     </platform>
+    -->
 
     <!-- android -->
     <platform name="android">
